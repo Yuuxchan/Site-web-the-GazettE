@@ -1,0 +1,503 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #292929;
+    font-family: "Montserrat";
+}
+
+h1, h2 {
+    font-family: "Cormorant";    
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Cormorant";
+    src: url("../assets/Fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/assets/Fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf");
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: whitesmoke;
+    list-style: none;
+    background-color: #DB3A3E;
+    padding: 0.5%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    -webkit-box-shadow: inset 0px 0px 20px 10px #292929;
+    -moz-box-shadow: inset 0px 0px 20px 10px #292929;
+    /* box-shadow: inset 0px 0px 20px 10px #292929; */
+    box-shadow: inset 0px 0px 20px 3px #292929;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.menu a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.menu a:hover {
+    border-bottom: 2px solid gold;
+}
+
+.premierniveau::after {
+    content: "▼";
+    font-size: 12px;
+}
+
+.sous {
+    display: none;
+    background-color: #DB3A3E;
+    position: absolute;
+    z-index: 1000;
+    padding: 2%;
+    width: 100%;
+}
+
+.sous li {
+    float: none;
+    width: 100%;
+    text-align: justify;
+    text-align-last: left;
+}
+
+nav ul li {
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+nav>ul li:hover .sous {
+    display: block;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    height: 570px;
+}
+
+header>div {
+    width: 97%;
+    background: linear-gradient(to right top, #292929, #DB3A3E, #84DCCF);
+    margin: auto;
+    height: 260px;
+    margin-left: 1%;
+    margin-right: 1%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.fadeInLeft {
+    width: 364px;
+    -webkit-animation-name: fadeInLeft;
+    -moz-animation-name: fadeInLeft;
+    -o-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-duration: 1s;
+    animation-delay: 1s;
+}
+
+
+@-webkit-keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translatex(-10px);
+        -moz-transform: translatex(-10px);
+        -o-transform: translatex(-10px);
+        transform: translatex(-10px);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translatex(0);
+        -moz-transform: translatex(0);
+        -o-transform: translatex(0);
+        transform: translatex(0);
+    }
+}
+
+@-moz-keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translatex(-10px);
+        -moz-transform: translatex(-10px);
+        -o-transform: translatex(-10px);
+        transform: translatex(-10px);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translatex(0);
+        -moz-transform: translatex(0);
+        -o-transform: translatex(0);
+        transform: translatex(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translatex(-100px);
+        -moz-transform: translatex(-100px);
+        -o-transform: translatex(-100px);
+        transform: translatex(-100px);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translatex(0);
+        -moz-transform: translatex(0);
+        -o-transform: translatex(0);
+        transform: translatex(0);
+    }
+}
+
+#button {
+    display: inline-block;
+    background-color: #84DCCF;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+#button2 {
+    display: inline-block;
+    background-color: #84DCCF;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    margin-right: 90%;
+    z-index: 1000;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    visibility: hidden;
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#button2.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#button a,
+#button2 a {
+    color: #292929;
+    text-align: center;
+}
+
+#button p {
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #292929;
+}
+
+#button2 p {
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #292929;
+}
+
+.livetour {
+    width: 100%;
+    height: auto;
+}
+
+.ecrangroupe {
+    background-image: url('../assets/images/groupe1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 570px;
+    margin: 2%;
+}
+
+.flou {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    height: 570px;
+}
+
+.textegroupe {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #29292980;
+    color: antiquewhite;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 300px;
+    margin: auto;
+    margin-left: 5%;
+}
+
+.presentation {
+    padding: 2%;
+    text-align: justify;
+}
+
+.membres {
+    background-color: #84DCCF;
+    border: none;
+    padding: 2%;
+}
+
+.imagegroupecouleur {
+    grid-column: 2;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 5%;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    margin: auto;
+}
+
+.photo1 {
+    width: 400px;
+    height: 300px;
+}
+
+.album {
+    background-image: url('../assets/images/pochettemass.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    height: 570px;
+    margin: 2%;
+}
+
+.flou2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    height: 570px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+}
+
+.pochettealbum {
+    grid-column: 1;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    backdrop-filter: blur(20%);
+}
+
+.mass {
+    width: 400px;
+    height: 460px
+}
+
+.infoalbum {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.infos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+#qrcode {
+    grid-column: 1;
+}
+
+.qrcodeimage {
+    max-width: 200px;
+    margin: 10px;
+}
+
+.artiste {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.masslivetour {
+    background-image: url('../assets/images/concert.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(20px);
+    height: 570px;
+    color: whitesmoke;
+    margin: 2%;
+}
+
+.flou3 {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    height: 570px;
+}
+
+.infostournee {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    margin: auto;
+}
+
+#decouvrirtournee {
+    background-color: #84DCCF;
+    border: none;
+    padding: 2%;
+    width: 300px;
+}
+
+.phototournee {
+    grid-column: 2;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
+}
+
+.phototournee img {
+    width: 400px;
+    height: 400px;
+}
+
+.dates {
+    background-image: url('../assets/images/salle.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 570px;
+    margin: 2%;
+    color: antiquewhite;
+    text-align: center;
+}
+
+.flou4 {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+}
+
+.flou4 h2 {
+    padding: 1%;
+}
+
+.precisiondates {
+    background-color: #29292990;
+    color: antiquewhite;
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+td {
+    text-align: center;
+    white-space: pre-wrap;
+    padding: 3%;
+    border-bottom: #DB3A3E 3px solid;
+}
+
+th {
+    padding: 2%;
+    border-bottom: #DB3A3E 3px solid;
+}
+
+.acheterplace {
+    background-color: transparent;
+    border: #DB3A3E 3px solid;
+    padding: 2%;
+    width: 300px;
+    color: whitesmoke;
+}
+
+.attention {
+    color: whitesmoke;
+    font-size: 12px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 270px;
+    background-color: #DB3A3E;
+}
+
+.logogroupe2 {
+    width: 300px;
+}
+
+a:hover {
+    color: #84DCCF;
+}
