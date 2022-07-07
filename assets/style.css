@@ -501,3 +501,8 @@ footer {
 a:hover {
     color: #84DCCF;
 }
+
+media all and (max-width: 1921px) {
+.acheterplace {
+    width: 150px; }
+    }
