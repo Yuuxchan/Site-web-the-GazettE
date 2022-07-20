@@ -485,11 +485,9 @@ th {
 }
 
 .acheterplace {
-    background-color: transparent;
-    border: #DB3A3E 3px solid;
+    background-color: #84DCCF;
     padding: 2%;
     width: 300px;
-    color: whitesmoke;
 }
 
 .attention {
