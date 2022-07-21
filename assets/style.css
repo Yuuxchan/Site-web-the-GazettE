@@ -8,8 +8,9 @@ body {
     font-family: "Montserrat";
 }
 
-h1, h2 {
-    font-family: "Cormorant";    
+h1,
+h2 {
+    font-family: "Cormorant";
 }
 
 h2 {
@@ -30,6 +31,7 @@ h3 {
     font-family: "Montserrat";
     src: url("/assets/Fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf");
 }
+
 .menu {
     display: flex;
     flex-direction: row;
@@ -195,7 +197,7 @@ header>div {
 #button {
     display: inline-block;
     background-color: #84DCCF;
-    width: 50px;
+    width: 60px;
     height: 50px;
     border-radius: 5px;
     position: fixed;
@@ -271,9 +273,6 @@ header>div {
 
 .flou {
     -webkit-backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
-    -o-backdrop-filter: blur(10px);
-    -ms-backdrop-filter: blur(10px);
     backdrop-filter: blur(5px);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -339,9 +338,6 @@ header>div {
     grid-gap: 5px;
     height: 570px;
     -webkit-backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
-    -o-backdrop-filter: blur(10px);
-    -ms-backdrop-filter: blur(10px);
     backdrop-filter: blur(5px);
 }
 
@@ -401,9 +397,6 @@ header>div {
 
 .flou3 {
     -webkit-backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
-    -o-backdrop-filter: blur(10px);
-    -ms-backdrop-filter: blur(10px);
     backdrop-filter: blur(5px);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -454,9 +447,6 @@ header>div {
 
 .flou4 {
     -webkit-backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
-    -o-backdrop-filter: blur(10px);
-    -ms-backdrop-filter: blur(10px);
     backdrop-filter: blur(5px);
 }
 
@@ -488,6 +478,7 @@ th {
     background-color: #84DCCF;
     padding: 2%;
     width: 300px;
+    border: none;
 }
 
 .attention {
@@ -495,7 +486,7 @@ th {
     font-size: 12px;
 }
 
-footer {
+#footer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -512,7 +503,237 @@ a:hover {
     color: #84DCCF;
 }
 
-media all and (max-width: 1921px) {
-.acheterplace {
-    width: 150px; }
+@media all and (max-width: 1921px) {
+    .acheterplace {
+        width: 150px;
     }
+}
+
+@media screen and (min-width: 49px) and (max-width: 668px) {
+    .menu {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .toggle_btn {
+        height: 30px;
+        width: 30px;
+        position: fixed;
+        float: left;
+        margin-left: 20px;
+        margin-top: 20px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .toggle_btn span {
+        height: 3px;
+        background-color: white;
+        width: 100%;
+        position: absolute;
+        top: 20px;
+        left: 0;
+    }
+
+    .toggle_btn span:before {
+        content: '';
+        height: 3px;
+        background-color: white;
+        width: 100%;
+        position: absolute;
+        top: -10px;
+        left: 0;
+    }
+
+    .toggle_btn span:after {
+        content: '';
+        height: 3px;
+        background-color: white;
+        width: 100%;
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
+
+    .nav {
+        height: 500px;
+        background-color: black;
+        width: 200px;
+        z-index: 2;
+        position: absolute;
+    }
+
+    .menu a {
+        color: white;
+        font-family: 'helvetica';
+        text-align: center;
+        display: block;
+        padding: 30px;
+        text-decoration: none;
+    }
+
+    .logo {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    .nav {
+        margin-left: -200px;
+        transition: 0.2s;
+    }
+
+    .nav_open {
+        margin-left: 0;
+        transition-duration: 0.2s;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 1;
+        grid-auto-rows: minmax(100px, auto);
+        margin: 0 auto;
+        gap: 30px;
+        grid-template-areas:
+            "nav"
+            "header"
+            "logo"
+            "groupe"
+            "album"
+            "tour"
+            "date"
+            "footer";
+    }
+
+    header {
+        height: 50px;
+    }
+
+    header div {
+        background: none;
+    }
+
+    .fadeInLeft {
+        -webkit-animation: none;
+    }
+
+    .ecrangroupe {
+        height: 263px;
+        background-image: url('../assets/images/ruki.jpg');
+        background-repeat: no-repeat;
+        object-fit: cover;
+        object-position: 100% 0;    }
+
+    .textegroupe {
+        display: none;
+    }
+
+    .imagegroupecouleur {
+        display: none;
+    }
+
+    .flou,
+    .flou2,
+    .flou3,
+    .flou4 {
+        backdrop-filter: none;
+    }
+
+    .album {
+        height: 263px;
+    }
+
+    .pochettealbum {
+        display: none;
+    }
+
+    .infoalbum {
+        display: none;
+    }
+
+    .masslivetour {
+        height: 263px;
+    }
+
+    .infostournee,
+    .phototournee {
+        display: none;
+    }
+
+    .dates {
+        height: 263px;
+    }
+
+    .dates h2 {
+        display: none;
+    }
+
+    .precisiondates,
+    .attention {
+        display: none;
+    }
+
+    #footer {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    svg {
+        width: 30px;
+    }
+
+    .logogroupe2 {
+        display: none;
+    }
+
+    #button2 {
+        margin-right: 70%;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .logo {
+        grid-area: logo;
+    }
+
+    .ecrangroupe {
+        grid-area: groupe;
+    }
+
+    .album {
+        grid-area: album;
+    }
+
+    .masslivetour {
+        grid-area: tour;
+    }
+
+    .dates {
+        grid-area: date;
+    }
+
+    .flou {
+        grid-area: flou;
+    }
+
+    .textegroupe {
+        grid-area: textegroupe;
+    }
+
+    .imagegroupecouleur {
+        grid-area: imagegroupe;
+    }
+
+    #footer {
+        grid-area: footer;
+    }
+}
