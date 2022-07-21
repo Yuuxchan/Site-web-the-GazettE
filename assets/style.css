@@ -606,6 +606,8 @@ a:hover {
             "tour"
             "date"
             "footer";
+            backdrop-filter: none;
+
     }
 
     header {
