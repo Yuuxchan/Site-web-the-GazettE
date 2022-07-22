@@ -32,6 +32,10 @@ h3 {
     src: url("/assets/Fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf");
 }
 
+.menusvg {
+    display: none;
+}
+
 .menu {
     display: flex;
     flex-direction: row;
@@ -79,7 +83,6 @@ h3 {
     position: absolute;
     z-index: 1000;
     padding: 2%;
-    width: 100%;
 }
 
 .sous li {
@@ -271,6 +274,10 @@ header>div {
     margin: 2%;
 }
 
+#decouverte {
+    display: none;
+}
+
 .flou {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(5px);
@@ -321,6 +328,10 @@ header>div {
 .photo1 {
     width: 400px;
     height: 300px;
+}
+
+.presentationdugroupe {
+    display: none;
 }
 
 .album {
@@ -514,81 +525,65 @@ a:hover {
         display: none;
     }
 
-    nav {
+    .menusvg {
+        display: block;
+        visibility: visible;
+    }
+
+    .topnav {
+        background-color: #DB3A3E;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 40vh;
         display: none;
     }
 
-    .toggle_btn {
-        height: 30px;
-        width: 30px;
-        position: fixed;
+    /* Style the links inside the navigation bar */
+    .topnav a {
         float: left;
-        margin-left: 20px;
-        margin-top: 20px;
-        cursor: pointer;
-        z-index: 1;
-    }
-
-    .toggle_btn span {
-        height: 3px;
-        background-color: white;
-        width: 100%;
-        position: absolute;
-        top: 20px;
-        left: 0;
-    }
-
-    .toggle_btn span:before {
-        content: '';
-        height: 3px;
-        background-color: white;
-        width: 100%;
-        position: absolute;
-        top: -10px;
-        left: 0;
-    }
-
-    .toggle_btn span:after {
-        content: '';
-        height: 3px;
-        background-color: white;
-        width: 100%;
-        position: absolute;
-        top: 10px;
-        left: 0;
-    }
-
-    .nav {
-        height: 500px;
-        background-color: black;
-        width: 200px;
-        z-index: 2;
-        position: absolute;
-    }
-
-    .menu a {
-        color: white;
-        font-family: 'helvetica';
-        text-align: center;
         display: block;
-        padding: 30px;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
         text-decoration: none;
+        font-size: 17px;
     }
 
-    .logo {
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 24px;
+    .topnav a.active {
+        background-color: #84DCCF;
+        color: white;
     }
 
-    .nav {
-        margin-left: -200px;
-        transition: 0.2s;
+    .topnav.responsive {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        color: whitesmoke;
+        list-style: none;
+        background-color: #DB3A3E;
+        padding: 0.5%;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        -webkit-box-shadow: inset 0px 0px 20px 10px #292929;
+        -moz-box-shadow: inset 0px 0px 20px 10px #292929;
+        /* box-shadow: inset 0px 0px 20px 10px #292929; */
+        box-shadow: inset 0px 0px 20px 3px #292929;
     }
 
-    .nav_open {
-        margin-left: 0;
-        transition-duration: 0.2s;
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
     }
 
     body {
@@ -602,11 +597,12 @@ a:hover {
             "header"
             "logo"
             "groupe"
+            "presentationgroupe"
             "album"
             "tour"
             "date"
             "footer";
-            backdrop-filter: none;
+        backdrop-filter: none;
 
     }
 
@@ -627,7 +623,33 @@ a:hover {
         background-image: url('../assets/images/ruki.jpg');
         background-repeat: no-repeat;
         object-fit: cover;
-        object-position: 100% 0;    }
+        object-position: 100% 0;
+    }
+
+    .presentationdugroupe {
+        height: 263px;
+        text-align: justify;
+        text-align-last: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: antiquewhite;
+        padding: 5%;
+    }
+
+    .listemembres {
+        list-style: none;
+    }
+
+    #decouverte {
+        background-color: #84DCCF;
+        color: #292929;
+        z-index: 1000;
+        width: 120px;
+        height: 50px;
+        padding: 2%;
+        border-radius: 5px;
+    }
 
     .textegroupe {
         display: none;
@@ -642,6 +664,7 @@ a:hover {
     .flou3,
     .flou4 {
         backdrop-filter: none;
+        display: none;
     }
 
     .album {
@@ -709,6 +732,10 @@ a:hover {
 
     .ecrangroupe {
         grid-area: groupe;
+    }
+
+    .presentationdugroupe {
+        grid-area: presentationgroupe
     }
 
     .album {
