@@ -11,8 +11,19 @@
 
 <body>
     <nav>
-        <ul class="menu">
-            <li>Accueil</li>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" aria-describedby="desc"
+                role="img" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" class="menusvg">
+                <path data-name="layer2" fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="2"
+                    d="M14 18h36M14 32h36" stroke-linejoin="round" stroke-linecap="round"></path>
+                <path data-name="layer1" fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="2"
+                    d="M14 46h36" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+        </a>
+        <ul class="menu" id="myTopnav">
+            <a href="index.html">
+                <li>Accueil</li>
+            </a>
             <li class="premierniveau">En savoir plus
                 <ul class="sous">
                     <li><a href="#">Le groupe</li></a>
@@ -27,18 +38,8 @@
             </li>
             <li>Tournée</li>
         </ul>
-    </nav>
 
-    <div class="toggle_btn">
-        <span></span>
-    </div>
-    <div class="menu nav">
-        <a href="index.html">Accueil</a>
-        <a href="">En savoir plus</a>
-        <a href="">Discographie</a>
-        <a href="">Tournée</a>
-        <a href="">Contact</a>
-    </div>
+    </nav>
 
     <header>
         <div>
@@ -72,7 +73,21 @@
             </div>
         </div>
     </section>
-    
+
+    <div class="presentationdugroupe">
+        <p>the Gazette est un groupe japonais de visual-kei, un mouvement de musique japonais s'apparentant à du rock.
+            Le groupe se compose de cinq membres :
+        <ul class="listemembres">
+            <li>Ruki au chant</li>
+            <li>Reita à la basse</li>
+            <li>Aoi et Uruha à la guitare</li>
+            <li>Kai à la batterie.</li>
+        </ul>
+        Le groupe s'est formé en 2002, bien qu'ils n'étaient initialement que trois.</p>
+        <button id="decouverte">Découvrir les membres</button>
+    </div>
+
+
     <section class="album">
         <div class="flou2">
             <div class="pochettealbum">
