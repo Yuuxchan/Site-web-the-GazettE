@@ -731,6 +731,10 @@ a:hover {
         align-items: center;
         color: #f5f5f5;
     }
+    
+    .datestourneemobile h2 {
+        margin: 2%;
+    }
 
     .acheterplace {
         width: 100px;
