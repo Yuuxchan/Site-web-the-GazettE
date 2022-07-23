@@ -686,6 +686,7 @@ a:hover {
         color: #DB3A3E;
         text-transform: capitalize;
         font-family: "Cormorant";
+        text-align: center;
     }
 
     h3 {
