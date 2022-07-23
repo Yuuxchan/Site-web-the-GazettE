@@ -641,10 +641,12 @@ a:hover {
         padding: 5%;
         margin-bottom: 70%;
         margin-top: 5%;
+        align-items: center;
     }
 
     .listemembres {
         list-style: none;
+        margin-left: -43%;
     }
 
     #decouverte {
