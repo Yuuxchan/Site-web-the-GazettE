@@ -10,35 +10,19 @@
 </head>
 
 <body>
-    <nav>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" aria-describedby="desc"
-                role="img" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" class="menusvg">
-                <path data-name="layer2" fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="2"
-                    d="M14 18h36M14 32h36" stroke-linejoin="round" stroke-linecap="round"></path>
-                <path data-name="layer1" fill="none" stroke="#ffffff" stroke-miterlimit="10" stroke-width="2"
-                    d="M14 46h36" stroke-linejoin="round" stroke-linecap="round"></path>
-            </svg>
-        </a>
-        <ul class="menu" id="myTopnav">
-            <a href="index.html">
-                <li>Accueil</li>
-            </a>
-            <li class="premierniveau">En savoir plus
-                <ul class="sous">
-                    <li><a href="#">Le groupe</li></a>
-                    <li><a href="#">Les membres</li></a>
-                </ul>
-            </li>
-            <li class="premierniveau">Discographie
-                <ul class="sous">
-                    <li><a href="#">Albums</li></a>
-                    <li><a href="#">Singles</li></a>
-                </ul>
-            </li>
-            <li>Tournée</li>
-        </ul>
-
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="pagegroupe.html">About</a></li>
+                <li><a href="#">Discographie</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <header>
@@ -86,13 +70,12 @@
         </ul>
         Le groupe s'est formé en 2002, bien qu'ils n'étaient initialement que trois : Ruki, Reita et Uruha. Ce n'est que
         plus tard qu'ils recrutent Aoi et Yune.
-        En 2003, Yune est remplacé par Kai.</p>
+        En 2003. Yune est remplacé par Kai.</p>
         <a href=""><button id="decouverte">Découvrir les membres</button></a>
     </div>
 
     <div class="qrcodeimage2">
         <img src="assets/images/qrcode.png" alt="qr code">
-
         <h2>Découvrez le dernier album</h2>
         <h3>Mass</h3>
     </div>
@@ -120,7 +103,7 @@
     <div class="datestourneemobile">
         <h2>Découvrez la tournée 2022</h2>
         <h3>Mass Live Tour</h3>
-                <img src="assets/images/masslivetour.svg" alt="image de la tournée" class="masssvg">
+        <img src="assets/images/masslivetour.svg" alt="image de la tournée" class="masssvg">
         <table>
             <tbody>
                 <tr>
@@ -267,7 +250,8 @@
                     data-name="layer1" fill="#ffffff"></path>
             </svg>
         </a>
-        <script type="text/javascript" src="assets/script.js"></script>
+    </footer>
+    <script type="text/javascript" src="assets/script.js"></script>
 </body>
 
 </html>
