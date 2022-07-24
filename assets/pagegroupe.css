@@ -489,4 +489,26 @@ h1 {
         text-align: left;
 
     }
+    
+        .episode__number {
+        display: none;
+        margin: auto;
+    }
+    
+        #footer {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    svg {
+        width: 30px;
+    }
+
+    .logogroupe2 {
+        display: none;
+    }
 }
