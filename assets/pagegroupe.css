@@ -203,7 +203,6 @@ sup {
 
 .text-light {
     font-weight: bolder;
-    color: #DB3A3E;
 }
 
 .text-bold {
@@ -266,6 +265,110 @@ sup {
     margin-top: 1.5em;
 }
 
+p {
+    margin: 0 0 13px 0;
+    text-align: justify;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #84DCCF;
+}
+
+svg:hover {
+    color: #84DCCF;
+}
+
+h1 {
+    text-align: left;
+    margin-bottom: 2%;
+    font-size: 10vw;
+    margin-left: 5%;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.container {
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.episode {
+    display: grid;
+    position: relative;
+    align-items: center;
+}
+
+.episode__number {
+    font-size: 3vw;
+    font-weight: bold;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    height: calc(10vw + 20px);
+    transition: all 0.2s ease-in;
+    color: #84DCCF;
+    text-transform: capitalize;
+    font-family: "Cormorant";
+}
+
+.episode__content {
+    border-top: 2px solid #fff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 15px 0;
+}
+
+.episode__content .title {
+    font-weight: 600;
+    margin: auto;
+}
+
+.episode__content .story {
+    line-height: 26px;
+}
+
+.precisionmembre {
+    list-style: none;
+}
+
+.rs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.rs a {
+    padding-left: 3%;
+}
+
+.title img {
+    width: 300px;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 270px;
+    background-color: #DB3A3E;
+}
+
+.logogroupe2 {
+    width: 300px;
+}
+
 @media (min-width: 860px) {
     .grid {
         grid-template-rows: minmax(1em, auto) max-content 1fr 3em minmax(1em, auto);
@@ -307,123 +410,19 @@ sup {
     }
 }
 
-p {
-    margin: 0 0 13px 0;
-    text-align: justify;
-}
-
-a {
-    color: #fff;
-}
-
-a:hover {
-    color: #84DCCF;
-}
-
-svg:hover {
-    color: #84DCCF;
-}
-
-h1 {
-    text-align: left;
-    margin-bottom: 2%;
-    font-size: 10vw;
-    margin-left: 5%;
-}
-
-.container h2 {
-    text-align: center;
-    margin-bottom: 2vw;
-}
-
-.container {
-    max-width: 1220px;
-    margin: 0 auto;
-    margin-top: 10%;
-}
-
-.episode {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    position: relative;
-}
-
-.episode__number {
-    font-size: 3vw;
-    font-weight: bold;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    text-align: center;
-    height: calc(10vw + 20px);
-    transition: all 0.2s ease-in;
-    color: #84DCCF;
-    text-transform: capitalize;
-    font-family: "Cormorant";
-}
-
-.episode__content {
-    border-top: 2px solid #fff;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-gap: 10px;
-    padding: 15px 0;
-}
-
-.episode__content .title {
-    font-weight: 600;
-}
-
-.episode__content .story {
-    line-height: 26px;
-}
-
-.precisionmembre {
-    list-style: none;
-}
-
-.rs {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 5%;
-}
-
-.rs a {
-    padding-left: 3%;
-}
-
-.title img {
-    width: 300px;
-}
-
-#footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    height: 270px;
-    background-color: #DB3A3E;
-}
-
-.logogroupe2 {
-    width: 300px;
-}
-
 @media (max-width: 600px) {
     .episode__content {
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 576px) {
-    .episode__content .story {
-        font-size: 15px;
-    }
-}
-
 @media screen and (min-width: 49px) and (max-width: 668px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat";
+    }
     .menu {
         display: none;
     }
@@ -487,15 +486,35 @@ h1 {
         float: none;
         display: block;
         text-align: left;
-
     }
-    
-        .episode__number {
-        display: none;
+
+    #button2 {
+        margin-right: 70%;
+    }
+
+    .container {
         margin: auto;
     }
-    
-        #footer {
+
+    .episode_content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .episode__content .story {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .episode__number {
+        display: none;
+    }
+
+    .rs {
+        justify-content: center;
+    }
+
+    #footer {
         display: flex;
         flex-direction: row;
         height: auto;
