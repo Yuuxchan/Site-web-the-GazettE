@@ -99,7 +99,7 @@ nav {
 
 #menu {
     position: absolute;
-    width: 180px;
+    width: 380px;
     height: 400px;
     box-shadow: 0 0 10px #85888C;
     margin: -50px 0 0 -50px;
@@ -422,19 +422,15 @@ h1 {
         margin: 0;
         padding: 0;
         font-family: "Montserrat";
+        font-size: 18px;
     }
 
     img {
         width: 100%;
     }
-
-    .menu {
-        display: none;
-    }
-
-    .menusvg {
-        display: block;
-        visibility: visible;
+    
+    #menu {
+        width: 180px;
     }
 
     .topnav {
